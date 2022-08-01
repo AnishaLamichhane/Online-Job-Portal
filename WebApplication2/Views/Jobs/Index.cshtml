@@ -1,0 +1,33 @@
+﻿@model List<WebApplication2.Models.Domain.Job>
+
+@{
+}
+
+<h2>Job List</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Required Skills</th>
+            <th>Posted Date</th>
+            <th>Salary</th>
+            <th> </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var job in Model)
+        {
+            <tr>
+                <td>@job.Id</td>
+                <td>@job.Title</td>
+                <td>@job.Description</td>
+                <td>@job.RequiredSkills</td>
+                <td>@job.PostedDate.ToString("dd-MM-yyyy")</td>
+                <td>@job.Salary</td>
+                <td><a href="Jobs/View/@job.Id">View</a></td>
+            </tr>
+        }
+    </tbody>
+</table>

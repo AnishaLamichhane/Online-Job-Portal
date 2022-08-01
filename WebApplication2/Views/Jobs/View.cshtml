@@ -1,0 +1,36 @@
+﻿@model WebApplication2.Models.UpdateJobViewModel
+
+@{
+}
+ 
+<h3>Edit Jobs</h3>
+<form method="post" action="View"  class="mt-5">
+     <div class="row mb-3">
+    <label for="" class="form-label">Job Id</label>
+    <input type="text" class="form-control" asp-for="Id" readonly>
+  </div>
+  <div class="row mb-3">
+    <label for="" class="form-label">Title</label>
+    <input type="text" class="form-control" asp-for="Title">
+  </div>
+   <div class="row mb-3">
+    <label for="" class="form-label">Description</label>
+     <input type="text" class="form-control" asp-for="Description">
+   </div>
+  <div class="row mb-3">
+    <label for="" class="form-label">RequiredSkills</label>
+    <input type="text" class="form-control" asp-for="RequiredSkills">
+  </div>
+  <div class="row mb-3">
+    <label for="" class="form-label">PostedDate</label>
+    <input type="date" class="form-control" asp-for="PostedDate">
+  </div>
+  <div class="row mb-3">
+    <label for="" class="form-label">Salary</label>
+    <input type="number" class="form-control" asp-for="Salary">
+  </div>
+ 
+   
+  <button type="submit" class="btn btn-primary">Submit</button>
+   <button type="submit" class="btn btn-danger" asp-action="Delete" asp-controller="Jobs">Delete</button>
+</form>
